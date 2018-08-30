@@ -6,7 +6,7 @@ RUN chown node:node /app
 ARG SERVICES
 # ENV SKIP_COMMIT_HOOK=1
 
-# RUN curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.3.2
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.3.2
 
 WORKDIR /app
 COPY package.json /app/package.json
@@ -17,7 +17,7 @@ RUN chown -R node:node /app/*
 
 USER node
 
-# RUN yarn install
+RUN yarn install
 
 COPY . /app
 
