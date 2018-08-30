@@ -27,5 +27,5 @@ COPY . /app
 
 WORKDIR /app
 
-EXPOSE 5050
+EXPOSE 5001
 CMD node /app/app.js
